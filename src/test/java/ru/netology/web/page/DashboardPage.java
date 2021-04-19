@@ -13,8 +13,7 @@ import java.util.Collection;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 @Name("Дашбоард")
 public class DashboardPage extends AkitaPage {
@@ -22,31 +21,28 @@ public class DashboardPage extends AkitaPage {
     private SelenideElement heading;
 
     @Name("Пополнить баланс первой карты")
-    @FindBy(css = "[data-test-id='92df3f1c-a033-48e6-8390-206f6b1f56c0'] button")
+    @FindBy(css = "[data-test-id='92df3f1c-a033-48e6-8390-206f6b1f56c0'] .button")
     private SelenideElement upBalanceCard1;
 
     @Name("Пополнить баланс второй карты")
-    @FindBy(css = "[data-test-id='0f3f5c2a-249e-4c3d-8287-09f7a039391d'] button")
+    @FindBy(css = "[data-test-id='0f3f5c2a-249e-4c3d-8287-09f7a039391d'] .button")
     private SelenideElement upBalanceCard2;
 
-    @Name("Обновить страницу")
-    @FindBy(css = "[data-test-id=action-reload]")
-    private SelenideElement updateBalance;
+//    @Name("Обновить страницу")
+//    @FindBy(css = "[data-test-id=action-reload]")
+//    private SelenideElement updateBalance;
 
-    @Name("Отменить действия")
-    @FindBy(css = "data-test-id=action-cancel")
-    private SelenideElement cancelTransfer;
+//    @Name("Отменить действия")
+//    @FindBy(css = "data-test-id=action-cancel")
+//    private SelenideElement cancelTransfer;
 
-    @Name("Карты")
-    @FindBy(css = ".list__item")
-    private ElementsCollection cards;
-
+    private ElementsCollection cards = $$(".list__item");
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = " р.";
 
-    DashboardPage(){
-        heading.shouldBe(visible);
-    }
+//    DashboardPage(){
+//        heading.shouldBe(visible);
+//    }
 
     public int getFirstCardBalance() {
         val text = cards.first().text();
@@ -74,8 +70,8 @@ public class DashboardPage extends AkitaPage {
         return Selenide.page(TransferPage.class);
     }
 
-    public TransferPage TransferCardPage(){
-        updateBalance.click();
-        return Selenide.page(TransferPage.class);
-    }
+//    public TransferPage TransferCardPage(){
+//        updateBalance.click();
+//        return Selenide.page(TransferPage.class);
+//    }
 }
