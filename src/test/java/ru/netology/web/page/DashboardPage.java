@@ -78,5 +78,4 @@ public class DashboardPage extends AkitaPage {
         updateBalance.click();
         return Selenide.page(TransferPage.class);
     }
-
 }

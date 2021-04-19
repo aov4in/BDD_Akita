@@ -7,7 +7,6 @@ import ru.alfabank.alfatest.cucumber.annotations.Name;
 import ru.alfabank.alfatest.cucumber.api.AkitaPage;
 import ru.netology.web.data.DataHelper;
 
-import static com.codeborne.selenide.Selenide.*;
 
 @Name("Страница входа")
 public class LoginPage extends AkitaPage {

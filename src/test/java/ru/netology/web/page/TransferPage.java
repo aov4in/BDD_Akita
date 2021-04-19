@@ -9,10 +9,8 @@ import ru.alfabank.alfatest.cucumber.annotations.Name;
 import ru.alfabank.alfatest.cucumber.api.AkitaPage;
 import ru.netology.web.data.DataHelper;
 
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.back;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.*;
 
 
 @Name("Трансферпейдж")
