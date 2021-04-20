@@ -14,5 +14,5 @@ install:
 
 build_script:
   - chmod +x gradlew
-#  - ./gradlew test -Dselenide.headless=true --info  # запускаем тест, флаг --info позволяет выводить больше информации
-  - ./gradlew clean test -Pheadless=true -Pbrowser=chrome -Pprofile=local -PremoteHub=http://remote/wd/hub
+  - ./gradlew test -Dselenide.headless=true --info  # запускаем тест, флаг --info позволяет выводить больше информации
+#  - ./gradlew clean test -Pheadless=true -Pbrowser=chrome -Pprofile=local -PremoteHub=http://remote/wd/hub
